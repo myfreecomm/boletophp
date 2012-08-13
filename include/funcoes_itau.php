@@ -51,7 +51,7 @@ $dv = digitoVerificador_barra($codigo_barras);
 $linha = substr($codigo_barras,0,4).$dv.substr($codigo_barras,4,43);
 
 $nossonumero = $carteira.'/'.$nnum.'-'.modulo_10($agencia.$conta.$carteira.$nnum);
-$agencia_codigo = $agencia." / ". $conta."-".modulo_10($agencia.$conta);
+$agencia_codigo = $agencia."/". $conta."-".modulo_10($agencia.$conta);
 
 $dadosboleto["codigo_barras"] = $linha;
 $dadosboleto["linha_digitavel"] = monta_linha_digitavel($linha); // verificar
@@ -130,13 +130,14 @@ $altura = 50 ;
 
 
 //Desenho da barra
-
+$base64_imgP = base64_img_encode('imagens/p.png');
+$base64_imgB = base64_img_encode('imagens/b.png');
 
 //Guarda inicial
-?><img src=imagens/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
-src=imagens/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
-src=imagens/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
-src=imagens/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
+?><img src=<?php echo $base64_imgP?> width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
+src=<?php echo $base64_imgB?> width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
+src=<?php echo $base64_imgP?> width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
+src=<?php echo $base64_imgB?> width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
 <?php
 $texto = $valor ;
 if((strlen($texto) % 2) <> 0){
@@ -155,7 +156,7 @@ while (strlen($texto) > 0) {
       $f1 = $largo ;
     }
 ?>
-    src=imagens/p.png width=<?php echo $f1?> height=<?php echo $altura?> border=0><img 
+    src=<?php echo $base64_imgP?> width=<?php echo $f1?> height=<?php echo $altura?> border=0><img 
 <?php
     if (substr($f,$i,1) == "0") {
       $f2 = $fino ;
@@ -163,16 +164,16 @@ while (strlen($texto) > 0) {
       $f2 = $largo ;
     }
 ?>
-    src=imagens/b.png width=<?php echo $f2?> height=<?php echo $altura?> border=0><img 
+    src=<?php echo $base64_imgB?> width=<?php echo $f2?> height=<?php echo $altura?> border=0><img 
 <?php
   }
 }
 
 // Draw guarda final
 ?>
-src=imagens/p.png width=<?php echo $largo?> height=<?php echo $altura?> border=0><img 
-src=imagens/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
-src=imagens/p.png width=<?php echo 1?> height=<?php echo $altura?> border=0> 
+src=<?php echo $base64_imgP?> width=<?php echo $largo?> height=<?php echo $altura?> border=0><img 
+src=<?php echo $base64_imgB?> width=<?php echo $fino?> height=<?php echo $altura?> border=0><img 
+src=<?php echo $base64_imgP?> width=<?php echo 1?> height=<?php echo $altura?> border=0> 
   <?php
 } //Fim da função
 
