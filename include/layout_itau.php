@@ -45,10 +45,25 @@
 </head>
 
 <BODY text=#000000 bgColor=#ffffff topMargin=0 rightMargin=0>
+<table cellspacing="0" cellpadding="0" width="666" border="0">
+  <tbody>
+    <tr>
+      <td class="ct" width="666"><img height="1" src="<?php echo base64_img_encode('imagens/6.png'); ?>" width="665" border="0"></td>
+    </tr>
+    <tr>
+      <td class="ct" width="666">
+        <div align="right">
+          <b class="cp">Recibo do Sacado</b>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
 <table width=666 cellspacing=5 cellpadding=0 border=0 align=Default>
   <tr>
-    <td class=ti width=455 colspan=2>
-      <?php echo $dadosboleto["identificacao"]; ?></br>
+   <!--<td width=41><IMG src="<?php echo base64_img_encode('imagens/logo_empresa.png'); ?>"></td>-->
+    <td class=ti width=455><?php echo $dadosboleto["identificacao"]; ?><br>
     </td>
     <td align=RIGHT width=150 class=ti>&nbsp;</td>
   </tr>
