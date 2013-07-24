@@ -36,6 +36,7 @@
 <style type=text/css>
 <!--.cp {  font: bold 10px Arial; color: black}
 <!--.ti {  font: 9px Arial, Helvetica, sans-serif}
+<!--.bi {  font: bold 9px Arial, Helvetica, sans-serif}
 <!--.ld { font: bold 15px Arial; color: #000000}
 <!--.ct { FONT: 9px "Arial Narrow"; COLOR: #000033}
 <!--.cn { FONT: 9px Arial; COLOR: black }
@@ -68,9 +69,31 @@
       <td align=RIGHT width=150 class=ti>&nbsp;</td>
     </tr>
   </table>
-  <br />
 <table cellspacing=0 cellpadding=0 width=666 border=0>
-<tbody><tr><td colspan=5><img height=2 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=268 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=156 height=13>Agência/Código
+<tbody>
+  <tr>
+    <td class=cp width='530'>
+      <span class="campo"><img src="<?php echo base64_img_encode('imagens/logocaixa.jpg'); ?>" width="150" height="40" border=0 /></span>
+    </td>
+    <td>
+      <table border="0">
+        <tr>  
+          <td class='bi' colspan='2' align='center'>Reclamações e sugestões</td>
+        </tr>
+        <tr> 
+          <td class='bi' align='right'>SAC:</td>
+          <td class='ti'>0800 726 0101</td>
+        </tr>
+        <tr> 
+          <td class='bi' align='right'>Ouvidoria:</td>
+          <td class='ti'>0800 725 7474</td>
+        </tr>
+        <tr><td class='ti' colspan='2' align='center'><a href="www.caixa.gov.br">www.caixa.gov.br</a></td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan=5><img height=2 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=666 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=268 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=156 height=13>Agência/Código
 do Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=34 height=13>Espécie</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=53 height=13>Quantidade</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=120 height=13>Nosso
 número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top width=268 height=12>
   <span class="campo"><?php echo $dadosboleto["cedente"]; ?></span></td>
@@ -140,23 +163,44 @@ de pagamento</td><td class=ct valign=top width=7 height=13><img height=13 src="<
   <span class="campo">
   <?php echo ($data_venc != "") ? $dadosboleto["data_vencimento"] : "Contra Apresentação" ?>
   </span></td>
-</tr><tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=472 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=472 border=0></td><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=180 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=472 height=13>Cedente</td><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=180 height=13>Agência/Código
-cedente</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top width=472 height=12>
+</tr><tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=472 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=472 border=0></td><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=180 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td>
+<td class=ct valign=top width="333" height=13>Cedente</td>
+<td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td>
+<td class=ct valign=top width="132" height=13>CPF/CNPJ</td>
+<td class=ct valign=top width=7 height=13><img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=180 height=13>Agência/Código
+cedente</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td>
+<td class=cp valign=top width="333" height="12">
   <span class="campo">
   <?php echo $dadosboleto["cedente"]?>
-  </span></td>
+  </span>
+</td>
+<td class=ct valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td>
+<td class=cp valign=top width="132" height="12">
+  <span class="campo">
+    <?php echo $dadosboleto["cpf_cnpj"]?>
+  </span>
+</td>
 <td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top align=right width=180 height=12>
   <span class="campo">
   <?php echo $dadosboleto["agencia_codigo"]?>
   </span></td>
-</tr><tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=472 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=472 border=0></td><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=180 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13>
+</tr><tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td>
+<td valign=top width="333" height=1>
+  <img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=333 border=0 />
+</td>
+<td class=ct valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td>
+<td valign=top width="132" height=1>
+  <img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width="132" border=0 />
+</td>
+<td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=180 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=180 border=0></td></tr></tbody></table><table cellspacing=0 cellpadding=0 border=0><tbody><tr><td class=ct valign=top width=7 height=13>
 <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=113 height=13>Data
 do documento</td><td class=ct valign=top width=7 height=13> <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=133 height=13>N<u>o</u>
 documento</td><td class=ct valign=top width=7 height=13> <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=62 height=13>Espécie
 doc.</td><td class=ct valign=top width=7 height=13> <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=34 height=13>Aceite</td><td class=ct valign=top width=7 height=13>
 <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=102 height=13>Data
 processamento</td><td class=ct valign=top width=7 height=13> <img height=13 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=ct valign=top width=180 height=13>Nosso
-número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top  width=113 height=12><div align=left>
+número</td></tr>
+<tr><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top  width=113 height=12><div align=left>
   <span class="campo">
   <?php echo $dadosboleto["data_documento"]?>
   </span></div></td><td class=cp valign=top width=7 height=12><img height=12 src="<?php echo base64_img_encode('imagens/1.png'); ?>" width=1 border=0></td><td class=cp valign=top width=133 height=12>
@@ -176,7 +220,8 @@ número</td></tr><tr><td class=cp valign=top width=7 height=12><img height=12 src
      <span class="campo">
      <?php echo $dadosboleto["nosso_numero"]?>
      </span></td>
-</tr><tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=113 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=113 border=0></td><td valign=top width=7 height=1>
+</tr>
+<tr><td valign=top width=7 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=113 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=113 border=0></td><td valign=top width=7 height=1>
 <img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=133 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=133 border=0></td><td valign=top width=7 height=1>
 <img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=62 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=62 border=0></td><td valign=top width=7 height=1>
 <img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=7 border=0></td><td valign=top width=34 height=1><img height=1 src="<?php echo base64_img_encode('imagens/2.png'); ?>" width=34 border=0></td><td valign=top width=7 height=1>
@@ -258,10 +303,4 @@ mecânica - <b class=cp>Ficha de Compensação</b></div></TD></TR><TR><TD class=ct 
  </TD>
 </tr></tbody></table><TABLE cellSpacing=0 cellPadding=0 width=666 border=0><TR><TD class=ct width=666></TD></TR><TBODY><TR><TD class=ct width=666><div align=right>Corte
 na linha pontilhada</div></TD></TR><TR><TD class=ct width=666><img height=1 src="<?php echo base64_img_encode('imagens/6.png'); ?>" width=665 border=0></TD></tr></tbody></table>
-<div style="width: 666px;"><center>
-<b>SAC CAIXA:</b> 0800 726 0101 (informações, reclamações, sugestões e elogios)<br>
-<b>Para pessoas com deficiência auditiva ou de fala:</b> 0800 726 2492<br>
-<b>Ouvidoria:</b> 0800 725 7474 (reclamações não solucionadas e denúncias)<br>
-<a href="http://caixa.gov.br">caixa.gov.br</a><br>
-</center></div>
 </BODY></HTML>
