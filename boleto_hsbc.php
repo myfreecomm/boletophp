@@ -81,6 +81,7 @@ $dadosboleto["cidade_uf"] = "Cidade / Estado";
 $dadosboleto["cedente"] = "Coloque a Razão Social da sua empresa aqui";
 
 // NÃO ALTERAR!
+include("include/base64_img_encoder.php");
 include("include/funcoes_hsbc.php"); 
 include("include/layout_hsbc.php");
 ?>
