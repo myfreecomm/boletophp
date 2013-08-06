@@ -37,7 +37,7 @@ $valor = formata_numero($dadosboleto["valor_boleto"],10,0,"valor");
 //carteira é CNR
 $carteira = $dadosboleto["carteira"];
 //codigocedente deve possuir 7 caracteres
-$codigocedente = formata_numero($dadosboleto["codigo_cedente"],7,0);
+$codigocedente = formata_numero($dadosboleto["conta_cedente"],7,0);
 
 $vencimento = $dadosboleto["data_vencimento"];
 
@@ -55,7 +55,7 @@ $dv = digitoVerificador_barra($barra, 9, 0);
 // Numero para o codigo de barras com 44 digitos
 $linha = substr($barra,0,4) . $dv . substr($barra,4);
 
-$agencia_codigo = $codigocedente;
+$agencia_codigo = $dadosboleto["agencia"]."/".$codigocedente;
 
 $dadosboleto["codigo_barras"] = $linha;
 $dadosboleto["linha_digitavel"] = monta_linha_digitavel($linha);

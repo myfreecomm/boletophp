@@ -70,8 +70,9 @@ $dadosboleto["especie_doc"] = "";
 
 
 // DADOS PERSONALIZADOS - HSBC
-$dadosboleto["codigo_cedente"] = "1122334"; // Código do Cedente (Somente 7 digitos)
+$dadosboleto["conta_cedente"] = "1122334"; // Código do Cedente (Somente 7 digitos)
 $dadosboleto["carteira"] = "CNR";  // Código da Carteira
+$dadosboleto["agencia"] = "0171";  // Código da Carteira
 
 // SEUS DADOS
 $dadosboleto["identificacao"] = "BoletoPhp - Código Aberto de Sistema de Boletos";
