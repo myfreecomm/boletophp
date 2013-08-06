@@ -53,13 +53,13 @@
 /* *** CABECALHO *** */
 
 #instr_header {
-	padding-left: 160px;
-	height: 65px;
+	height: 40px;
 }
 
 #instr_header h1 {
-	font-size: 16px;
+	font-size: 10px;
 	margin: 5px 0px;
+  font-weight: normal;
 }
 
 #instr_header address {
@@ -622,7 +622,7 @@ div.barcode {
 			<td class="carteira">Carteira</td>
 			<td class="especie2">Espécie</td>
 			<td class="qtd2">Quantidade</td>
-			<td class="xvalor">x Valor</td>
+			<td class="xvalor">Valor</td>
 			<td class="valor_doc2">(=) Valor documento</td>
 		</tr>
 		<tr class="campos">
