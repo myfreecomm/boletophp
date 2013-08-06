@@ -39,11 +39,10 @@ $carteira = $dadosboleto["carteira"];
 //codigocedente deve possuir 7 caracteres
 $codigocedente = formata_numero($dadosboleto["codigo_cedente"],7,0);
 
-$ndoc = $dadosboleto["numero_documento"];
 $vencimento = $dadosboleto["data_vencimento"];
 
 // número do documento (sem dvs) é 13 digitos
-$nnum = formata_numero($dadosboleto["numero_documento"],13,0);
+$nnum = formata_numero($dadosboleto["nosso_numero"],13,0);
 // nosso número (com dvs) é 16 digitos
 $nossonumero = geraNossoNumero($nnum,$codigocedente,$vencimento,'4');
 
